@@ -1,0 +1,46 @@
+<HTML>
+	<STYLE>
+	#myContainer {
+	  width: 400px;
+	  height: 400px;
+	  position: relative;
+	  background: yellow;
+	}
+
+	#myAnimation {
+	  width: 50px;
+	  height: 50px;
+	  position: absolute;
+	  background-color: red;
+	}
+	</STYLE>
+
+	<BODY>
+		<P>
+			<BUTTON ONCLICK="myMove()">Click Me</BUTTON>
+		</p>
+
+		<DIV ID ="myContainer">
+		<DIV ID ="myAnimation"></DIV>
+	</DIV>
+
+	<SCRIPT>
+		// EXPLAIN WHAT THE myMove() METHOD DOES USING THIS COMMENT SPACE
+		function myMove() {
+		  var elem = document.getElementById("myAnimation");  
+		  var pos = 0;
+		  var id = setInterval(frame, 10);
+		  
+		  function frame() {
+			if (pos == 350) {
+			document.write("i love you so much, adriane baby!!\n");
+			} else {
+			  pos++;
+			  elem.style.top = pos + 'px';
+			  elem.style.left = pos + 'px';
+			}
+		  }
+		}
+	</SCRIPT>
+	</BODY>
+</HTML>
